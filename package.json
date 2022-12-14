@@ -3,10 +3,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "turbo run build --filter=next-commerce...",
-    "dev": "turbo run dev",
-    "start": "turbo run start",
-    "types": "turbo run types",
+    "build": "PORT=8000  turbo run build --filter=next-commerce...",
+    "dev": "PORT=8000  turbo run dev",
+    "start": "PORT=8000  turbo run start",
+    "types": "PORT=8000  turbo run types",
     "prettier-fix": "prettier --write ."
   },
   "devDependencies": {

@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    image: commerce-main
+    build: .
+    volumes:
+      - ./src:/app/src
+      - ./site:/app/site
+      - ./packages:/app/packages
+      - ./dev:/app/dev
+    tty: true
+    environment:
+      - WATCHPACK_POLLING=true
+    ports:
+      - "8000:8000"
